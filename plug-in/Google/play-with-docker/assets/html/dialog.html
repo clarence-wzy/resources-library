@@ -1,0 +1,40 @@
+<div ng-app="PWD" ng-controller="TryController as pwd">
+    <div class="modal fade" tabindex="-1" role="dialog" id="try-in-pwd-modal" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Try in Play with Docker</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Stacks</h5>
+                            <div class="alert alert-danger" ng-if="tags.length==0">There are no stack files defined for this image. <a href="https://github.com/play-with-docker/stacks" target="_blank">Read more</a></div>
+                            <div ng-if="tags.length>0">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Tag</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="tag in tags">
+                                            <td><a href="{{tag.html_url}}/stack.yml" target="_blank">{{tag.name}}</a></td>
+                                            <td><a class="btn btn-primary btn-sm" href="{{pwdUrl}}?stack={{currentRepo}}/{{tag.name}}/stack.yml" target="_blank">Try</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="{{pwdUrl}}" target="_blank">Go to Play with Docker</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

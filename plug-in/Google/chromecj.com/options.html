@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/options.css" />
+	<title>一键翻译</title>
+</head>
+<body>
+	<header>一键翻译<label><input type="checkbox" /> 开启</label></header>
+	<article>
+		<section>
+			<fieldset>
+				<ul>
+					<li><label><input type="radio" value="1" name="dictionary" />海词(Dict)</label></li>
+					<li><label><input type="radio" value="2" name="dictionary" />有道(YouDao)</label></li>
+					<li><label><input type="radio" value="3" name="dictionary" />爱词霸(Iciba)</label></li>
+					<li><label><input type="radio" value="4" name="dictionary" />谷歌翻译(Google)</label></li>					
+				</ul>
+				<div><input type="button" class="btns" value="切换词典" /><input type="button" class="btns" value="使用教程" /><span id="status" class="success">&nbsp;</span></div>
+			</fieldset>
+			<div id="help" class="hide">1. 在网页上选择内容。<br/>2. 在选择的内容上点击右键。<br/>3. 在菜单里选择"翻译××"!</div>
+		</section>
+	</article>
+	<script type="text/javascript" src="options.js"></script>
+</body>
+</html>

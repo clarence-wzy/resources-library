@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    /**name of extension*/
+    "name": "一键翻译",
+    
+    /**version of the extension*/
+    "version": "0.1",
+    
+    /**manifest version*/
+    "manifest_version": 2,
+    
+    /**extension description*/
+    "description": "一键翻译，右键菜单快速翻译。",
+    
+    /**extension icons*/
+    "icons" : {
+        "16" : "icons/icon16.png",
+        "48" : "icons/icon48.png",
+        "128" : "icons/icon128.png"
+    },
+    
+    /**set content permissions the extension can access*/
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ],
+    
+    /**show extension icon in Google Chrome toolbar*/
+    "browser_action":{
+        "default_icon":"icons/icon19.png",
+        "default_popup":"options.html",
+        "default_title":"一键翻译"
+    },
+    
+    /**extension options page*/
+    "options_page": "options.html",
+    
+    /**background scripts run in extensions*/
+    "background": {
+        "scripts": ["translate.js"]
+    }
+}
